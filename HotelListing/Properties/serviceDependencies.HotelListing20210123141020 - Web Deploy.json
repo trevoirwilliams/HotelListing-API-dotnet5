@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/hotellistingdbserver/databases/HotelListing_db",
+      "type": "mssql.azure",
+      "connectionId": "sqlConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

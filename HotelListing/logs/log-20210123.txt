@@ -1,0 +1,9 @@
+2021-01-23 14:06:14.742 -05:00 [INF] Application Is Starting
+2021-01-23 14:06:16.933 -05:00 [INF] User profile is available. Using 'C:\Users\Trevoir\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-23 14:06:17.534 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-23 14:06:17.534 -05:00 [INF] Hosting environment: Development
+2021-01-23 14:06:17.534 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing
+2021-01-23 14:06:17.580 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-01-23 14:06:17.751 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 173.3644ms
+2021-01-23 14:06:17.938 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-01-23 14:06:18.170 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 230.8497ms

@@ -3,7 +3,7 @@
 
 An Educational Web API built using .NET Core 5.0 
 
-By doing this course, you would have:
+By doing this course, you will:
 - Build a fully data driven REST Web API using cutting edge technology 
 - Create a database using Entity Framework Core
 - Unit Of Work and Generic Repository Pattern 

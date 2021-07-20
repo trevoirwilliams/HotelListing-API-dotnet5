@@ -62,13 +62,13 @@ namespace HotelListing
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
             });
 
-            services.AddControllers(config => {
+            services.AddControllers(/*config => {
                 config.CacheProfiles.Add("120SecondsDuration", new CacheProfile
                 {
                     Duration = 120
 
                 });
-            }).AddNewtonsoftJson(op => 
+            }*/).AddNewtonsoftJson(op => 
             op.SerializerSettings.ReferenceLoopHandling = 
                 Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 

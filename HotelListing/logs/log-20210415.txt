@@ -1,0 +1,921 @@
+2021-04-15 17:46:59.929 -05:00 [INF] Application Is Starting
+2021-04-15 17:47:00.973 -05:00 [INF] User profile is available. Using 'C:\Users\Trevoir\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-04-15 17:47:01.485 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-15 17:47:01.485 -05:00 [INF] Hosting environment: Development
+2021-04-15 17:47:01.485 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing
+2021-04-15 17:47:01.526 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:44379/api/account/login application/json 68
+2021-04-15 17:47:01.526 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-04-15 17:47:01.567 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:47:01.569 -05:00 [INF] Not valid - method isn't GET or HEAD.
+2021-04-15 17:47:01.569 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:47:01.570 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:47:01.570 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:47:01.570 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:47:01.667 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 143.3205ms
+2021-04-15 17:47:01.704 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - -
+2021-04-15 17:47:01.713 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui-standalone-preset.js - -
+2021-04-15 17:47:01.713 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui-bundle.js - -
+2021-04-15 17:47:01.727 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2021-04-15 17:47:01.727 -05:00 [INF] The file /swagger-ui.css was not modified
+2021-04-15 17:47:01.727 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2021-04-15 17:47:01.729 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 16.7292ms
+2021-04-15 17:47:01.729 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - - - 304 - text/css 25.1169ms
+2021-04-15 17:47:01.729 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 16.7292ms
+2021-04-15 17:47:01.819 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2021-04-15 17:47:01.859 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2021-04-15 17:47:01.905 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-04-15 17:47:01.938 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - -
+2021-04-15 17:47:01.938 -05:00 [INF] The file /favicon-32x32.png was not modified
+2021-04-15 17:47:01.938 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - - - 304 - image/png 0.7004ms
+2021-04-15 17:47:02.034 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.9123ms
+2021-04-15 17:47:02.406 -05:00 [INF] Login Attempt for trev@example.com 
+2021-04-15 17:47:03.087 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:47:03.833 -05:00 [INF] Executed DbCommand (71ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-04-15 17:47:04.009 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2021-04-15 17:47:04.126 -05:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-04-15 17:47:04.167 -05:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2304.5562ms
+2021-04-15 17:47:04.168 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2021-04-15 17:47:04.171 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:47:04.173 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:49:04 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:47:04.174 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:47:04.182 -05:00 [INF] Validation headers generated. ETag: Strong, "C46746911483FB9843EC7613D6C4495E". Last-Modified: Thu, 15 Apr 2021 22:47:04 GMT
+2021-04-15 17:47:04.182 -05:00 [INF] Generating Vary header.
+2021-04-15 17:47:04.182 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:47:04.194 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:44379/api/account/login application/json 68 - 202 361 application/json;+charset=utf-8 2670.8017ms
+2021-04-15 17:47:26.738 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:47:26.746 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:47:26.754 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:47:26.754 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:47:26.754 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:47:26.754 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:47:26.754 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:47:26.816 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:47:26.817 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:47:26.822 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:47:26.858 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:47:26.889 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:47:26.897 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-04-15 17:47:26.898 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-04-15 17:47:26.907 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:47:26.937 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:47:26.950 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 128.0993ms
+2021-04-15 17:47:26.950 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:47:26.951 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:47:26.951 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:49:26 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:47:26.951 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:47:26.951 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:47:26 GMT
+2021-04-15 17:47:26.951 -05:00 [INF] Generating Vary header.
+2021-04-15 17:47:26.951 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:47:26.956 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 217.5062ms
+2021-04-15 17:47:34.841 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:47:34.843 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:47:34.843 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:47:34.843 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:47:34.843 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:47:34.844 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:47:34.844 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:47:34.846 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:47:34.846 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:47:34.847 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:47:34.856 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:47:34.859 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:47:34.863 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:47:34.864 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:47:34.864 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 17.0765ms
+2021-04-15 17:47:34.864 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:47:34.864 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:47:34.864 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:49:34 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:47:34.864 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:47:34.864 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:47:34 GMT
+2021-04-15 17:47:34.864 -05:00 [INF] Generating Vary header.
+2021-04-15 17:47:34.864 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:47:34.865 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 23.9630ms
+2021-04-15 17:47:40.720 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:47:40.720 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:47:40.720 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:47:40.720 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:47:40.720 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:47:40.720 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:47:40.720 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:47:40.721 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:47:40.721 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:47:40.721 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:47:40.723 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:47:40.723 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:47:40.727 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:47:40.728 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:47:40.728 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 7.0897ms
+2021-04-15 17:47:40.728 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:47:40.728 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:47:40.728 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:49:40 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:47:40.728 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:47:40.729 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:47:40 GMT
+2021-04-15 17:47:40.729 -05:00 [INF] Generating Vary header.
+2021-04-15 17:47:40.729 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:47:40.729 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 9.3664ms
+2021-04-15 17:47:42.797 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:47:42.797 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:47:42.797 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:47:42.797 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:47:42.797 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:47:42.797 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:47:42.797 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:47:42.799 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 1. Blocked by rule *, TraceIdentifier 8000004b-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:47:42.800 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:47:42.800 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:49:42 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:47:42.800 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:47:42.800 -05:00 [INF] Generating Vary header.
+2021-04-15 17:47:42.800 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:47:42.801 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 4.1715ms
+2021-04-15 17:47:44.370 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:47:44.370 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:47:44.370 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:47:44.370 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:47:44.370 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:47:44.370 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:47:44.370 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:47:44.370 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 2. Blocked by rule *, TraceIdentifier 8000004c-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:47:44.370 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:47:44.370 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:49:44 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:47:44.370 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:47:44.370 -05:00 [INF] Generating Vary header.
+2021-04-15 17:47:44.370 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:47:44.371 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.3255ms
+2021-04-15 17:51:24.566 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:24.567 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:24.567 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:24.567 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:24.568 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:24.568 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:24.568 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:24.597 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:51:24.597 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:51:24.597 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:51:24.601 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:51:24.605 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:51:24.612 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:51:24.612 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:51:24.612 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 15.2915ms
+2021-04-15 17:51:24.612 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:51:24.613 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:24.613 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:24 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:24.613 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:51:24.613 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:51:24 GMT
+2021-04-15 17:51:24.613 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:24.613 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:24.613 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 47.1265ms
+2021-04-15 17:51:25.294 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:25.295 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:25.295 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:25.295 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:25.295 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:25.295 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:25.295 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:25.295 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 1. Blocked by rule *, TraceIdentifier 8000004f-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:25.295 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:25.295 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:25 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:25.295 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:25.295 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:25.295 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:25.296 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.2976ms
+2021-04-15 17:51:25.929 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:25.929 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:25.929 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:25.929 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:25.929 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:25.929 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:25.929 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:25.929 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 2. Blocked by rule *, TraceIdentifier 80000050-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:25.929 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:25.929 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:25 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:25.929 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:25.929 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:25.929 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:25.930 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.6831ms
+2021-04-15 17:51:26.683 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:26.683 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:26.683 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:26.683 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:26.683 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:26.683 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:26.683 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:26.683 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 3. Blocked by rule *, TraceIdentifier 80000051-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:26.683 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:26.683 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:26 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:26.683 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:26.683 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:26.683 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:26.684 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.7066ms
+2021-04-15 17:51:27.257 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:27.257 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:27.257 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:27.257 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:27.257 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:27.257 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:27.257 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:27.258 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 4. Blocked by rule *, TraceIdentifier 80000052-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:27.258 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:27.258 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:27 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:27.258 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:27.258 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:27.258 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:27.260 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 2.5441ms
+2021-04-15 17:51:27.892 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:27.892 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:27.892 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:27.893 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:27.893 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:27.893 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:27.893 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:27.893 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 5. Blocked by rule *, TraceIdentifier 80000053-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:27.893 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:27.893 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:27 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:27.893 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:27.893 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:27.893 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:27.893 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.1237ms
+2021-04-15 17:51:28.460 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:28.460 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:28.461 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:28.461 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:28.461 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:28.461 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:28.461 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:28.461 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 6. Blocked by rule *, TraceIdentifier 80000054-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:28.461 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:28.461 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:28 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:28.461 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:28.461 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:28.461 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:28.461 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.1695ms
+2021-04-15 17:51:29.293 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:29.293 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:29.293 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:29.293 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:29.293 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:29.293 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:29.293 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:29.293 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 7. Blocked by rule *, TraceIdentifier 80000055-0004-d200-b63f-84710c7967bb.
+2021-04-15 17:51:29.293 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:29.293 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:29 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:29.293 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:51:29.293 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:29.293 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:29.294 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.0608ms
+2021-04-15 17:51:30.133 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:51:30.134 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:51:30.134 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:51:30.134 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:51:30.134 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:51:30.134 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:51:30.134 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:51:30.134 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:51:30.134 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:51:30.134 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:51:30.134 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:51:30.135 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:51:30.137 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:51:30.138 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:51:30.138 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 4.3279ms
+2021-04-15 17:51:30.138 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:51:30.139 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:51:30.139 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:53:30 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:51:30.139 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:51:30.139 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:51:30 GMT
+2021-04-15 17:51:30.139 -05:00 [INF] Generating Vary header.
+2021-04-15 17:51:30.139 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:51:30.139 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 5.7142ms
+2021-04-15 17:55:31.249 -05:00 [INF] Application Is Starting
+2021-04-15 17:55:32.026 -05:00 [INF] User profile is available. Using 'C:\Users\Trevoir\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-04-15 17:55:32.293 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-15 17:55:32.293 -05:00 [INF] Hosting environment: Development
+2021-04-15 17:55:32.293 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing
+2021-04-15 17:55:32.326 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-04-15 17:55:32.430 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 105.9369ms
+2021-04-15 17:55:32.599 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-04-15 17:55:32.699 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 97.5496ms
+2021-04-15 17:55:35.821 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:55:35.842 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:55:35.844 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:55:35.844 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:55:35.846 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:55:35.846 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:55:35.846 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:55:36.143 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:55:36.145 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:55:36.176 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:55:37.104 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:55:37.575 -05:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:55:37.616 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-04-15 17:55:37.616 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-04-15 17:55:37.658 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:55:37.696 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:55:37.791 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 1611.0874ms
+2021-04-15 17:55:37.791 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:55:37.794 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:55:37.796 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:57:37 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:55:37.797 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:55:37.805 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:55:37 GMT
+2021-04-15 17:55:37.805 -05:00 [INF] Generating Vary header.
+2021-04-15 17:55:37.805 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:55:37.818 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 1996.7412ms
+2021-04-15 17:55:42.620 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:55:42.621 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:55:42.621 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:55:42.621 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:55:42.621 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:55:42.621 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:55:42.621 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:55:42.626 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:55:42.626 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:55:42.628 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:55:42.660 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:55:42.662 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:55:42.665 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:55:42.668 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:55:42.668 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 39.8947ms
+2021-04-15 17:55:42.668 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:55:42.668 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:55:42.668 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:57:42 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:55:42.668 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:55:42.669 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:55:42 GMT
+2021-04-15 17:55:42.669 -05:00 [INF] Generating Vary header.
+2021-04-15 17:55:42.669 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:55:42.669 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 49.2487ms
+2021-04-15 17:55:43.636 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:55:43.637 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:55:43.637 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:55:43.637 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:55:43.637 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:55:43.637 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:55:43.637 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:55:43.638 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 1. Blocked by rule *, TraceIdentifier 80000088-0003-6700-b63f-84710c7967bb.
+2021-04-15 17:55:43.639 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:55:43.639 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:57:43 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:55:43.639 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:55:43.639 -05:00 [INF] Generating Vary header.
+2021-04-15 17:55:43.639 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:55:43.640 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 4.1439ms
+2021-04-15 17:55:44.679 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:55:44.680 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:55:44.680 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:55:44.680 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:55:44.680 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:55:44.680 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:55:44.680 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:55:44.680 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 2. Blocked by rule *, TraceIdentifier 80000089-0003-6700-b63f-84710c7967bb.
+2021-04-15 17:55:44.680 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:55:44.680 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:57:44 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:55:44.680 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:55:44.680 -05:00 [INF] Generating Vary header.
+2021-04-15 17:55:44.680 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:55:44.681 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.5944ms
+2021-04-15 17:55:45.392 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:55:45.392 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:55:45.392 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:55:45.392 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:55:45.392 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:55:45.392 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:55:45.392 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:55:45.393 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 3. Blocked by rule *, TraceIdentifier 8000008a-0003-6700-b63f-84710c7967bb.
+2021-04-15 17:55:45.393 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:55:45.393 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:57:45 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:55:45.393 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:55:45.393 -05:00 [INF] Generating Vary header.
+2021-04-15 17:55:45.393 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:55:45.393 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 1.1775ms
+2021-04-15 17:56:10.189 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:56:10.189 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:56:10.189 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:56:10.190 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:56:10.190 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:56:10.190 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:56:10.190 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:56:10.196 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:56:10.196 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:56:10.196 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:56:10.206 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:56:10.209 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:56:10.214 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:56:10.216 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:56:10.216 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 19.8457ms
+2021-04-15 17:56:10.216 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:56:10.216 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:56:10.216 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:58:10 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:56:10.216 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:56:10.217 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:56:10 GMT
+2021-04-15 17:56:10.217 -05:00 [INF] Generating Vary header.
+2021-04-15 17:56:10.217 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:56:10.217 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 28.1221ms
+2021-04-15 17:56:26.737 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:56:26.737 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:56:26.737 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:56:26.738 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:56:26.738 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:56:26.738 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:56:26.738 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:56:26.738 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:56:26.738 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:56:26.738 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:56:26.739 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:56:26.739 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:56:26.745 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:56:26.746 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:56:26.747 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 8.379ms
+2021-04-15 17:56:26.747 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:56:26.747 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:56:26.747 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:58:26 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:56:26.747 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:56:26.747 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:56:26 GMT
+2021-04-15 17:56:26.747 -05:00 [INF] Generating Vary header.
+2021-04-15 17:56:26.747 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:56:26.747 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 10.1844ms
+2021-04-15 17:56:27.812 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:56:27.812 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:56:27.812 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:56:27.812 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:56:27.812 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:56:27.812 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:56:27.813 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:56:27.813 -05:00 [INF] Request get:/api/hotel/ from IP ::1 has been blocked, quota 1/5s exceeded by 1. Blocked by rule *, TraceIdentifier 8000008d-0003-6700-b63f-84710c7967bb.
+2021-04-15 17:56:27.813 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:56:27.813 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:58:27 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:56:27.813 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:56:27.813 -05:00 [INF] Generating Vary header.
+2021-04-15 17:56:27.813 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:56:27.814 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 429 - text/plain 2.1696ms
+2021-04-15 17:56:34.216 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:56:34.217 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:56:34.217 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:56:34.217 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:56:34.217 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:56:34.217 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:56:34.217 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:56:34.217 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:56:34.217 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:56:34.217 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:56:34.218 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:56:34.218 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:56:34.221 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:56:34.222 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:56:34.222 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 4.484ms
+2021-04-15 17:56:34.222 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:56:34.222 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:56:34.222 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 22:58:34 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:56:34.222 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:56:34.222 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:56:34 GMT
+2021-04-15 17:56:34.222 -05:00 [INF] Generating Vary header.
+2021-04-15 17:56:34.222 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:56:34.223 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 6.1753ms
+2021-04-15 17:58:22.829 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 17:58:22.830 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:58:22.830 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 17:58:22.830 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:58:22.830 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:58:22.861 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:58:22.861 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:58:22.862 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:58:22.862 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:58:22.862 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:58:22.864 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:58:22.868 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 17:58:22.871 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 17:58:22.871 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 17:58:22.872 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 8.9806ms
+2021-04-15 17:58:22.872 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 17:58:22.872 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:58:22.872 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 23:00:22 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:58:22.872 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:58:22.872 -05:00 [INF] Validation headers generated. ETag: Strong, "CCA5EFCEE603E10B5ACE779C32041D5E". Last-Modified: Thu, 15 Apr 2021 22:58:22 GMT
+2021-04-15 17:58:22.872 -05:00 [INF] Generating Vary header.
+2021-04-15 17:58:22.872 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:58:22.872 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 423 application/json;+charset=utf-8 43.4163ms
+2021-04-15 17:59:38.626 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:44379/api/Hotel/ application/json 79
+2021-04-15 17:59:38.627 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:59:38.627 -05:00 [INF] Not valid - method isn't GET or HEAD.
+2021-04-15 17:59:38.627 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:59:38.627 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:59:38.627 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:59:38.627 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:59:38.631 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:59:38.638 -05:00 [INF] Authorization was successful.
+2021-04-15 17:59:38.638 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-04-15 17:59:38.646 -05:00 [INF] Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHotel(HotelListing.Models.CreateHotelDTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:59:38.698 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-04-15 17:59:38.715 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.CreateHotel (HotelListing) in 68.6184ms
+2021-04-15 17:59:38.715 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-04-15 17:59:38.715 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:59:38.715 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 23:01:38 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:59:38.715 -05:00 [INF] Not generating Validation headers as the response status code does not indicate succes.
+2021-04-15 17:59:38.715 -05:00 [INF] Generating Vary header.
+2021-04-15 17:59:38.715 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:59:38.717 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:44379/api/Hotel/ application/json 79 - 400 257 application/problem+json;+charset=utf-8 90.8262ms
+2021-04-15 17:59:45.949 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:44379/api/Hotel/ application/json 79
+2021-04-15 17:59:45.949 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:59:45.949 -05:00 [INF] Not valid - method isn't GET or HEAD.
+2021-04-15 17:59:45.949 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:59:45.949 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:59:45.949 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:59:45.950 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:59:45.950 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:59:45.952 -05:00 [INF] Authorization was successful.
+2021-04-15 17:59:45.952 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-04-15 17:59:45.952 -05:00 [INF] Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHotel(HotelListing.Models.CreateHotelDTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:59:45.960 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:59:46.144 -05:00 [ERR] Failed executing DbCommand (27ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Hotels] ([Address], [CountryId], [Name], [Rating])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Hotels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-04-15 17:59:46.202 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'HotelListing.Data.DatabaseContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "Hotellisting_db", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:affbdd36-4b28-4a6f-ac2e-5dd11d73f8a5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "Hotellisting_db", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:affbdd36-4b28-4a6f-ac2e-5dd11d73f8a5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-04-15 17:59:46.206 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.CreateHotel (HotelListing) in 253.3891ms
+2021-04-15 17:59:46.206 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-04-15 17:59:46.209 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "Hotellisting_db", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:affbdd36-4b28-4a6f-ac2e-5dd11d73f8a5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HotelListing.Repository.UnitOfWork.Save() in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Repository\UnitOfWork.cs:line 31
+   at HotelListing.Controllers.HotelController.CreateHotel(CreateHotelDTO hotelDTO) in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Controllers\HotelController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-04-15 17:59:46.247 -05:00 [ERR] Something Went Wrong in the Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "Hotellisting_db", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:affbdd36-4b28-4a6f-ac2e-5dd11d73f8a5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HotelListing.Repository.UnitOfWork.Save() in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Repository\UnitOfWork.cs:line 31
+   at HotelListing.Controllers.HotelController.CreateHotel(CreateHotelDTO hotelDTO) in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Controllers\HotelController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-04-15 17:59:46.253 -05:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at HotelListing.ServiceExtensions.<>c.<<ConfigureExceptionHandler>b__2_1>d.MoveNext() in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\ServiceExtensions.cs:line 69
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+2021-04-15 17:59:46.256 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "Hotellisting_db", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:affbdd36-4b28-4a6f-ac2e-5dd11d73f8a5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HotelListing.Repository.UnitOfWork.Save() in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Repository\UnitOfWork.cs:line 31
+   at HotelListing.Controllers.HotelController.CreateHotel(CreateHotelDTO hotelDTO) in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Controllers\HotelController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-04-15 17:59:46.264 -05:00 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-04-15 17:59:46.265 -05:00 [ERR] Connection ID "7421932200402092165", Request ID "80000091-0003-6700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "Hotellisting_db", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:affbdd36-4b28-4a6f-ac2e-5dd11d73f8a5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HotelListing.Repository.UnitOfWork.Save() in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Repository\UnitOfWork.cs:line 31
+   at HotelListing.Controllers.HotelController.CreateHotel(CreateHotelDTO hotelDTO) in C:\Users\Trevoir\source\repos\HotelListing\HotelListing\Controllers\HotelController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-04-15 17:59:46.269 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:44379/api/Hotel/ application/json 79 - 500 - - 319.7720ms
+2021-04-15 17:59:57.679 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:44379/api/Hotel/ application/json 79
+2021-04-15 17:59:57.679 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 17:59:57.679 -05:00 [INF] Not valid - method isn't GET or HEAD.
+2021-04-15 17:59:57.679 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 17:59:57.679 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 17:59:57.679 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 17:59:57.679 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 17:59:57.680 -05:00 [INF] Successfully validated the token.
+2021-04-15 17:59:57.680 -05:00 [INF] Authorization was successful.
+2021-04-15 17:59:57.680 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-04-15 17:59:57.680 -05:00 [INF] Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHotel(HotelListing.Models.CreateHotelDTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 17:59:57.681 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 17:59:57.686 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Hotels] ([Address], [CountryId], [Name], [Rating])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Hotels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-04-15 17:59:57.741 -05:00 [INF] Executing CreatedAtRouteResult, writing value of type 'HotelListing.Data.Hotel'.
+2021-04-15 17:59:57.777 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.CreateHotel (HotelListing) in 96.8434ms
+2021-04-15 17:59:57.777 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-04-15 17:59:57.777 -05:00 [INF] Generating expiration headers.
+2021-04-15 17:59:57.777 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 23:01:57 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 17:59:57.777 -05:00 [INF] Generating Validation headers.
+2021-04-15 17:59:57.777 -05:00 [INF] Validation headers generated. ETag: Strong, "F1306BD5082429D1825B4D23F3F4E7EE". Last-Modified: Thu, 15 Apr 2021 22:59:57 GMT
+2021-04-15 17:59:57.777 -05:00 [INF] Generating Vary header.
+2021-04-15 17:59:57.777 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 17:59:57.778 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:44379/api/Hotel/ application/json 79 - 201 82 application/json;+charset=utf-8 98.8447ms
+2021-04-15 18:00:07.869 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44379/api/Hotel/ - -
+2021-04-15 18:00:07.869 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-04-15 18:00:07.869 -05:00 [INF] Not valid - no If-None-Match or If-Modified-Since headers.
+2021-04-15 18:00:07.869 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-04-15 18:00:07.869 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-04-15 18:00:07.869 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-04-15 18:00:07.869 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-04-15 18:00:07.870 -05:00 [INF] Successfully validated the token.
+2021-04-15 18:00:07.870 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 18:00:07.870 -05:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-04-15 18:00:07.870 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-04-15 18:00:07.871 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Hotels] AS [h]
+2021-04-15 18:00:07.881 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2021-04-15 18:00:07.881 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-04-15 18:00:07.881 -05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 11.5133ms
+2021-04-15 18:00:07.881 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-04-15 18:00:07.881 -05:00 [INF] Generating expiration headers.
+2021-04-15 18:00:07.881 -05:00 [INF] Expiration headers generated. Expires: Thu, 15 Apr 2021 23:02:07 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-04-15 18:00:07.882 -05:00 [INF] Generating Validation headers.
+2021-04-15 18:00:07.882 -05:00 [INF] Validation headers generated. ETag: Strong, "EAA8007E004F15A89353764D9E2EA26D". Last-Modified: Thu, 15 Apr 2021 23:00:07 GMT
+2021-04-15 18:00:07.882 -05:00 [INF] Generating Vary header.
+2021-04-15 18:00:07.882 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-04-15 18:00:07.882 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44379/api/Hotel/ - - - 200 506 application/json;+charset=utf-8 13.3429ms

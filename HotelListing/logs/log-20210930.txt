@@ -1,0 +1,86 @@
+2021-09-30 18:15:53.729 -05:00 [INF] Application Is Starting
+2021-09-30 18:15:55.854 -05:00 [INF] User profile is available. Using 'C:\Users\Trevoir\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-09-30 18:15:56.374 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-30 18:15:56.374 -05:00 [INF] Hosting environment: Development
+2021-09-30 18:15:56.375 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing
+2021-09-30 18:15:56.449 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger - -
+2021-09-30 18:15:56.530 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2021-09-30 18:15:56.544 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger - - - 301 - - 97.0154ms
+2021-09-30 18:15:56.726 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 197.4533ms
+2021-09-30 18:15:56.808 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - -
+2021-09-30 18:15:56.809 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui-bundle.js - -
+2021-09-30 18:15:56.809 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/swagger-ui-standalone-preset.js - -
+2021-09-30 18:15:56.907 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-09-30 18:15:56.907 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-09-30 18:15:56.912 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui.css - - - 200 142933 text/css 103.1886ms
+2021-09-30 18:15:56.917 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 107.5719ms
+2021-09-30 18:15:56.922 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-09-30 18:15:56.943 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 134.1965ms
+2021-09-30 18:15:57.308 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2021-09-30 18:15:57.308 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - -
+2021-09-30 18:15:57.310 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-09-30 18:15:57.310 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - - - 200 628 image/png 2.0834ms
+2021-09-30 18:15:57.436 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.0293ms
+2021-09-30 18:16:28.050 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 134
+2021-09-30 18:16:28.063 -05:00 [INF] CORS policy execution successful.
+2021-09-30 18:16:28.114 -05:00 [INF] Checking for conditional GET/HEAD.
+2021-09-30 18:16:28.118 -05:00 [INF] Not valid - method isn't GET or HEAD.
+2021-09-30 18:16:28.118 -05:00 [INF] Don't generate 304 - Not Modified.  Continue.
+2021-09-30 18:16:28.120 -05:00 [INF] Checking for conditional PUT/PATCH.
+2021-09-30 18:16:28.120 -05:00 [INF] Not valid - method isn't PUT or PATCH.
+2021-09-30 18:16:28.120 -05:00 [INF] Don't generate 412 - Precondition Failed.  Continue.
+2021-09-30 18:16:28.443 -05:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2021-09-30 18:16:28.499 -05:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(HotelListing.Core.DTOs.UserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2021-09-30 18:16:29.395 -05:00 [INF] Registration Attempt for user11@example.com 
+2021-09-30 18:16:30.729 -05:00 [INF] Entity Framework Core 5.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-09-30 18:16:33.238 -05:00 [INF] Executed DbCommand (110ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-09-30 18:16:33.302 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-09-30 18:16:33.523 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2021-09-30 18:16:33.580 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2021-09-30 18:16:33.645 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)
+2021-09-30 18:16:33.658 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2021-09-30 18:16:33.684 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-09-30 18:16:33.693 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-09-30 18:16:33.729 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+2021-09-30 18:16:33.744 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2021-09-30 18:16:33.759 -05:00 [INF] Executing AcceptedResult, writing value of type 'null'.
+2021-09-30 18:16:33.766 -05:00 [INF] Executed action HotelListing.Controllers.AccountController.Register (HotelListing) in 5260.4252ms
+2021-09-30 18:16:33.767 -05:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2021-09-30 18:16:33.773 -05:00 [INF] Generating expiration headers.
+2021-09-30 18:16:33.775 -05:00 [INF] Expiration headers generated. Expires: Thu, 30 Sep 2021 23:18:33 GMT. Cache-Control: private,max-age=120,must-revalidate.
+2021-09-30 18:16:33.778 -05:00 [INF] Generating Validation headers.
+2021-09-30 18:16:33.789 -05:00 [INF] Validation headers generated. ETag: Strong, "F52EB6F13067F4FDF7847EDE934D5D59". Last-Modified: Thu, 30 Sep 2021 23:16:33 GMT
+2021-09-30 18:16:33.789 -05:00 [INF] Generating Vary header.
+2021-09-30 18:16:33.789 -05:00 [INF] Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2021-09-30 18:16:33.801 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 134 - 202 0 - 5751.5471ms

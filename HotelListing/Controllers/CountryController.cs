@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using HotelListing.Core.DTOs;
+using HotelListing.Core.IRepository;
+using HotelListing.Core.Models;
 using HotelListing.Data;
-using HotelListing.IRepository;
-using HotelListing.Models;
-using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelListing.Controllers
@@ -23,7 +22,7 @@ namespace HotelListing.Controllers
         private readonly ILogger<CountryController> _logger;
         private readonly IMapper _mapper;
 
-        public CountryController(IUnitOfWork unitOfWork, ILogger<CountryController> logger, 
+        public CountryController(IUnitOfWork unitOfWork, ILogger<CountryController> logger,
             IMapper mapper)
         {
             _unitOfWork = unitOfWork;
@@ -45,11 +44,12 @@ namespace HotelListing.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetCountry")]
-        [ResponseCache(CacheProfileName = "120SecondsDuration")]
+        ////[ResponseCache(CacheProfileName = "120SecondsDuration")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountry(int id)
         {
+            throw new Exception("Error message");
             var country = await _unitOfWork.Countries.Get(q => q.Id == id, include: q => q.Include(x => x.Hotels));
             var result = _mapper.Map<CountryDTO>(country);
             return Ok(result);
@@ -73,7 +73,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return CreatedAtRoute("GetCountry", new { id = country.Id }, country);
-           
+
         }
 
         [Authorize]
@@ -101,7 +101,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return NoContent();
-           
+
         }
 
         [Authorize]
@@ -128,7 +128,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return NoContent();
-           
+
         }
     }
 }

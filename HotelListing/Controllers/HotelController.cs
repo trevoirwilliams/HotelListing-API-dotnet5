@@ -1,15 +1,14 @@
 ﻿using AutoMapper;
+using HotelListing.Core.DTOs;
+using HotelListing.Core.IRepository;
+using HotelListing.Core.Models;
 using HotelListing.Data;
-using HotelListing.IRepository;
-using HotelListing.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelListing.Controllers
@@ -37,7 +36,7 @@ namespace HotelListing.Controllers
         {
             var hotels = await _unitOfWork.Hotels.GetPagedList(requestParams);
             var results = _mapper.Map<IList<HotelDTO>>(hotels);
-            return Ok(results);  
+            return Ok(results);
         }
 
         [HttpGet("{id:int}", Name = "GetHotel")]
@@ -77,15 +76,15 @@ namespace HotelListing.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateHotel(int id, [FromBody] UpdateHotelDTO hotelDTO)
         {
-            if(!ModelState.IsValid || id < 1)
+            if (!ModelState.IsValid || id < 1)
             {
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest(ModelState);
             }
 
-            
+
             var hotel = await _unitOfWork.Hotels.Get(q => q.Id == id);
-            if(hotel == null)
+            if (hotel == null)
             {
                 _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateHotel)}");
                 return BadRequest("Submitted data is invalid");
@@ -96,7 +95,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return NoContent();
-           
+
         }
 
         [Authorize]
@@ -123,7 +122,7 @@ namespace HotelListing.Controllers
             await _unitOfWork.Save();
 
             return NoContent();
-           
+
         }
     }
 }

@@ -1,0 +1,47 @@
+2021-11-15 10:05:11.490 -05:00 [INF] Now listening on: https://localhost:7194
+2021-11-15 10:05:11.599 -05:00 [INF] Now listening on: http://localhost:5194
+2021-11-15 10:05:11.605 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-15 10:05:11.608 -05:00 [INF] Hosting environment: Development
+2021-11-15 10:05:11.610 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing.API6\
+2021-11-15 10:05:13.377 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger - -
+2021-11-15 10:05:13.807 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger - - - 301 0 - 436.8623ms
+2021-11-15 10:05:14.143 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/index.html - -
+2021-11-15 10:05:14.470 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/index.html - - - 200 - text/html;charset=utf-8 326.6383ms
+2021-11-15 10:05:14.482 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/swagger-ui-bundle.js - -
+2021-11-15 10:05:14.482 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/swagger-ui.css - -
+2021-11-15 10:05:14.484 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/swagger-ui-standalone-preset.js - -
+2021-11-15 10:05:14.526 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-11-15 10:05:14.539 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/swagger-ui.css - - - 200 143632 text/css 57.2894ms
+2021-11-15 10:05:14.694 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-11-15 10:05:14.707 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 224.2314ms
+2021-11-15 10:05:14.721 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-11-15 10:05:14.726 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 243.8334ms
+2021-11-15 10:05:15.202 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/favicon-32x32.png - -
+2021-11-15 10:05:15.206 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-11-15 10:05:15.218 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/favicon-32x32.png - - - 200 628 image/png 15.8002ms
+2021-11-15 10:05:15.388 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - -
+2021-11-15 10:05:15.570 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.2269ms
+2021-11-15 10:06:13.719 -05:00 [INF] Now listening on: https://localhost:7194
+2021-11-15 10:06:13.753 -05:00 [INF] Now listening on: http://localhost:5194
+2021-11-15 10:06:13.758 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-15 10:06:13.760 -05:00 [INF] Hosting environment: Development
+2021-11-15 10:06:13.763 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing.API6\
+2021-11-15 10:06:14.821 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/index.html - -
+2021-11-15 10:06:15.207 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/index.html - - - 200 - text/html;charset=utf-8 390.2717ms
+2021-11-15 10:06:15.696 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - -
+2021-11-15 10:06:15.789 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.7364ms
+2021-11-15 10:06:16.173 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - -
+2021-11-15 10:06:16.179 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.7983ms
+2021-11-15 10:09:44.765 -05:00 [INF] Now listening on: https://localhost:7194
+2021-11-15 10:09:44.801 -05:00 [INF] Now listening on: http://localhost:5194
+2021-11-15 10:09:44.808 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-15 10:09:44.810 -05:00 [INF] Hosting environment: Development
+2021-11-15 10:09:44.813 -05:00 [INF] Content root path: C:\Users\Trevoir\source\repos\HotelListing\HotelListing.API6\
+2021-11-15 10:09:46.016 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/index.html - -
+2021-11-15 10:09:46.375 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/index.html - - - 200 - text/html;charset=utf-8 361.2964ms
+2021-11-15 10:09:46.834 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - -
+2021-11-15 10:09:46.979 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 145.5634ms
+2021-11-15 10:09:47.067 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - -
+2021-11-15 10:09:47.070 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.5619ms
+2021-11-15 10:09:49.895 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - -
+2021-11-15 10:09:49.901 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7194/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.7819ms

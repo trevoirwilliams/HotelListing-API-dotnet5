@@ -56,10 +56,7 @@ namespace HotelListing
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAuthManager, AuthManager>();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
-            });
+            services.ConfigureSwaggerDoc();
 
             services.AddControllers(/*config => {
                 config.CacheProfiles.Add("120SecondsDuration", new CacheProfile

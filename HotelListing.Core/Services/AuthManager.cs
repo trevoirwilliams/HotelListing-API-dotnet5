@@ -1,12 +1,18 @@
 ﻿using HotelListing.Core.DTOs;
+using HotelListing.Core.IRepository;
+using HotelListing.Core.Models;
 using HotelListing.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Net;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,6 +85,37 @@ namespace HotelListing.Core.Services
             _user = await _userManager.FindByNameAsync(userDTO.Email);
             var validPassword = await _userManager.CheckPasswordAsync(_user, userDTO.Password);
             return (_user != null && validPassword);
+        }
+
+        public async Task<string> CreateRefreshToken()
+        {
+            await _userManager.RemoveAuthenticationTokenAsync(_user, "HotelListingApi", "RefreshToken");
+            var newRefreshToken = await _userManager.GenerateUserTokenAsync(_user, "HotelListingApi", "RefreshToken");
+            var result = await _userManager.SetAuthenticationTokenAsync(_user, "HotelListingApi", "RefreshToken", newRefreshToken);
+            return newRefreshToken;
+        }
+
+        public async Task<TokenRequest> VerifyRefreshToken(TokenRequest request)
+        {
+            var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(request.Token);
+            var username = tokenContent.Claims.ToList().FirstOrDefault(q => q.Type == ClaimTypes.Name)?.Value;
+            _user = await _userManager.FindByNameAsync(username);
+            try
+            {
+                var isValid = await _userManager.VerifyUserTokenAsync(_user, "HotelListingApi", "RefreshToken", request.RefreshToken);
+                if (isValid)
+                {
+                    return new TokenRequest { Token = await CreateToken(), RefreshToken = await CreateRefreshToken() } ;
+                }
+                await _userManager.UpdateSecurityStampAsync(_user);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return null;
         }
     }
 }
